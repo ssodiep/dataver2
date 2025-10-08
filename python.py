@@ -212,11 +212,11 @@ if st.session_state['extracted_data'] is not None:
     # Hiển thị các thông số quan trọng (Chuyển đổi các thông số về định dạng tiền tệ/phần trăm)
     col1, col2, col3 = st.columns(3)
 col1.metric("Vốn Đầu tư (C₀)", f"{data['Vốn đầu tư']:,.0f} VNĐ")
-    col2.metric("Dòng đời dự án (N)", f"{data['Dòng đời dự kiến']:.0f} năm")
-    col3.metric("WACC (k)", f"{data['WACC']:.2%}")
-    col1.metric("Doanh thu Hàng năm (R)", f"{data['Doanh thu hàng năm']:,.0f} VNĐ")
-    col2.metric("Chi phí HĐ Hàng năm (C)", f"{data['Chi phí hoạt động hàng năm']:,.0f} VNĐ")
-    col3.metric("Thuế suất (t)", f"{data['Thuế suất']:.2%}")
+col2.metric("Dòng đời dự án (N)", f"{data['Dòng đời dự kiến']:.0f} năm")
+col3.metric("WACC (k)", f"{data['WACC']:.2%}")
+col1.metric("Doanh thu Hàng năm (R)", f"{data['Doanh thu hàng năm']:,.0f} VNĐ")
+col2.metric("Chi phí HĐ Hàng năm (C)", f"{data['Chi phí hoạt động hàng năm']:,.0f} VNĐ")
+col3.metric("Thuế suất (t)", f"{data['Thuế suất']:.2%}")
 
     st.markdown("---")
     
