@@ -219,7 +219,7 @@ col3.metric("Thuế suất (t)", f"{data['Thuế suất']:.2%}")
 
 st.markdown("---")
     
-    st.subheader("3. Bảng Dòng tiền (Cash Flow)")
+st.subheader("3. Bảng Dòng tiền (Cash Flow)")
     
     # Giả định: Khấu hao = Vốn đầu tư / Dòng đời dự án (phương pháp đường thẳng)
     # Giả định: Giá trị thanh lý (Salvage Value) = 0
@@ -279,11 +279,11 @@ st.markdown("---")
             'DPP': dpp
         }
         
-        col1, col2, col3, col4 = st.columns(4)
-        col1.metric("NPV (Giá trị hiện tại thuần)", f"{npv:,.0f} VNĐ", delta=("Dự án có lời" if npv > 0 else "Dự án lỗ"))
-        col2.metric("IRR (Tỷ suất sinh lời nội tại)", f"{irr:.2%}" if not np.isnan(irr) else "N/A")
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("NPV (Giá trị hiện tại thuần)", f"{npv:,.0f} VNĐ", delta=("Dự án có lời" if npv > 0 else "Dự án lỗ"))
+col2.metric("IRR (Tỷ suất sinh lời nội tại)", f"{irr:.2%}" if not np.isnan(irr) else "N/A")
 col3.metric("PP (Thời gian hoàn vốn)", f"{pp:.2f} năm" if isinstance(pp, float) else pp)
-        col4.metric("DPP (Hoàn vốn có chiết khấu)", f"{dpp:.2f} năm" if isinstance(dpp, float) else dpp)
+col4.metric("DPP (Hoàn vốn có chiết khấu)", f"{dpp:.2f} năm" if isinstance(dpp, float) else dpp)
 
         # --- Chức năng 5: Yêu cầu AI Phân tích ---
         st.markdown("---")
