@@ -208,7 +208,6 @@ if st.session_state['extracted_data'] is not None:
     data = st.session_state['extracted_data']
     
     st.subheader("2. Các Thông số Dự án đã Trích xuất")
-    
     # Hiển thị các thông số quan trọng (Chuyển đổi các thông số về định dạng tiền tệ/phần trăm)
     col1, col2, col3 = st.columns(3)
 col1.metric("Vốn Đầu tư (C₀)", f"{data['Vốn đầu tư']:,.0f} VNĐ")
@@ -218,7 +217,7 @@ col1.metric("Doanh thu Hàng năm (R)", f"{data['Doanh thu hàng năm']:,.0f} VN
 col2.metric("Chi phí HĐ Hàng năm (C)", f"{data['Chi phí hoạt động hàng năm']:,.0f} VNĐ")
 col3.metric("Thuế suất (t)", f"{data['Thuế suất']:.2%}")
 
-    st.markdown("---")
+st.markdown("---")
     
     st.subheader("3. Bảng Dòng tiền (Cash Flow)")
     
